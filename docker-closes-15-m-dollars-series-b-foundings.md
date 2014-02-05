@@ -1,6 +1,6 @@
 #DOCKER获得B轮1500万美元融资
 
-我们高兴地[宣布](http://www.businesswire.com/news/home/20140122005497/en/Docker-Closes-15M-Series-Funding#.Ut_b3hDTmUl) [ Docker Inc. ](http://www.docker.com/) 完成了$1500 万美元的 B 轮融资。该轮融资由[ Greylock Partners ](http://www.greylock.com/)领投，[ Insight Venture Partners ](http://www.insightpartners.com/)和我们 A 轮投资者[ Benchmark ](http://www.crunchbase.com/financial-organization/benchmark-2)（ Peter Fenton ）、[ Trinity Ventures ](http://www.trinityventures.com/)（ Dan Scholnick ）及[ Jerry Yang/AME Cloud Ventures ](http://www.amecloudventures.com/)跟投。
+我们高兴地[宣布](http://www.businesswire.com/news/home/20140122005497/en/Docker-Closes-15M-Series-Funding#.Ut_b3hDTmUl) [ Docker Inc. ](http://www.docker.com/) 完成了 1500 万美元的 B 轮融资。该轮融资由[ Greylock Partners ](http://www.greylock.com/)领投，[ Insight Venture Partners ](http://www.insightpartners.com/)和我们 A 轮投资者[ Benchmark ](http://www.crunchbase.com/financial-organization/benchmark-2)（ Peter Fenton ）、[ Trinity Ventures ](http://www.trinityventures.com/)（ Dan Scholnick ）及[ Jerry Yang/AME Cloud Ventures ](http://www.amecloudventures.com/)跟投。
 
 此轮融资因为以下两大原因而备受瞩目。
 
