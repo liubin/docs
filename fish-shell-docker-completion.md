@@ -1,1 +1,0 @@
-Fish Shell Docker Completion
