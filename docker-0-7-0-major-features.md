@@ -1,3 +1,5 @@
+![Why named docker?](http://docker.u.qiniudn.com/PPT_why_named_docker.jpg)
+
 嗨，Docker 0.7 终于和各位见面了！希望大家喜欢。自 0.6.0 发布以来，经过无数的 bug 修复和使用细节的改进，新版本增加了 7 个主要功能：
 
 - 功能1：标准 Linux 支持
@@ -17,8 +19,6 @@
 Alex Larsson、Josh Poimboeuf、Lokesh Mandvekar、Vincent Batts、Adam Miller、Marek Goldmann and Matthew Miller from the Red Hat team、 Fred Kautz、Tianon “andrew” Gravi、Paul Nasrat、Sven Dowideit、James Turnbull、Edmund Wagner、David Calavera、Travis Cline、Gurjeet Singh、Justin Force、Johan Euphrosine、Jerome Petazzoni、Ole Reifschneider、Andy Rothfusz、Will Rouesnel、Greg Thornton、Scott Bessler、Todd Lunter、Vladimir Rutsky、Nicolas Dudebout、Jim Alateras、Roger Peppe
 
 向以上各位，以及所有对 Docker 的发布伸出援助之手的人们致以谢意：谢谢你们！
-
-{<1>}![Why named docker?](http://docker.u.qiniudn.com/PPT_why_named_docker.jpg)
 
 ###功能1：标准 Linux 支持
 
@@ -46,7 +46,7 @@ _0.6.7 版中引入，特别感谢：Frederic Kautz_
 
 离线传输功能对于软件供应商特别有用，通常他们需要把软件做成封装好的软件包发给“企业级”用户。现在，通过 Docker 的离线传输，供应商可以把更新后的软件放入 Docker 容器再发给用户，既不影响软件发行机制，用户也不必担心安全问题。
 
-正如 Github 企业版团队的 David Calavera 所说：“有了离线传输，用 Docker 容器构建内部部署[1]的软件产品变得非常容易。无需注册，你的容器就可以部署到任何地方。”
+正如 Github 企业版团队的 David Calavera 所说：“有了离线传输，用 Docker 容器构建内部部署[^1]的软件产品变得非常容易。无需注册，你的容器就可以部署到任何地方。”
 
 ###功能4：高级端口重定向
 
@@ -135,7 +135,7 @@ _特别感谢：Tianon Gravi、 Andy Rothfusz 和 Sven Dowideit_
 
 Docker 的活跃发展令人难以置信，而且在短时间内获得了巨大成功。但是像 Docker 这样活跃的项目，持续的跟进是很困难的。尽管 Docker 已多次改进，但很多代码依然不成熟，或者尚未完成、或者需要重构甚至重写。Docker 的发布就像打开一扇防洪闸门，尽管经历6个月、2844个 pull request 的演进，代码问题依旧淹没在每天无数贡献和功能需求的洪流中。
 
-我们花了一些时间来忍受并最终适应 Docker 疯狂的发展速度；最终，我们找到了解决途径。从 0.7 版本开始，我们将把质量放在第一位，并从多方面面严格把关：用户界面、测试覆盖率、代码的健壮性、易开发性、文档以及 API 的前后连贯性。我们深知，对于 Docker 的那些 bug ，目前还没有银弹[2]。我们最初规划了宏大的“代码重写”计划，但最终我们决定放慢速度，稳扎稳打，一步步处理问题。日复一日，不断提交、再提交，我们会让 Docker 逐步发展起来。
+我们花了一些时间来忍受并最终适应 Docker 疯狂的发展速度；最终，我们找到了解决途径。从 0.7 版本开始，我们将把质量放在第一位，并从多方面面严格把关：用户界面、测试覆盖率、代码的健壮性、易开发性、文档以及 API 的前后连贯性。我们深知，对于 Docker 的那些 bug ，目前还没有银弹[^2]。我们最初规划了宏大的“代码重写”计划，但最终我们决定放慢速度，稳扎稳打，一步步处理问题。日复一日，不断提交、再提交，我们会让 Docker 逐步发展起来。
 
 对于大家的支持，我们心怀感激。无数人看到了 Docker 的潜力，面对 bug 和缺陷，他们会说”还好啦“，“ Docker 很有用，我们不介意它还有点儿粗糙”。我们希望有一天，人们会说：“我用 Docker，因为它很有用。而且，非常可靠！”
 
@@ -147,7 +147,11 @@ Docker 的活跃发展令人难以置信，而且在短时间内获得了巨大�
 
 Solomon、 Michael、 Victor、 Guillaume 以及所有的 Docker 维护者们，加油！
 
-[1] 原文为" on-premises software "，是指运行在用户自己的生产、营业场所的软件产品，区别于部署在远程的软件。维基百科页面：http://en.wikipedia.org/wiki/On-premises_software （译者注）
+#####[^1] 原文为" on-premises software "，是指运行在用户自己的生产、营业场所的软件产品，区别于部署在远程的软件。维基百科页面：http://en.wikipedia.org/wiki/On-premises_software （译者注）
 
-[2] 银弹（ _Silver Bullet_ ）的典故在 IT 经典图书《人月神话——软件项目管理之道》（ _The Mythical Man-Month: Essays on Software Engineering_ ）中提到过。在古老的传说中，只有银弹才能杀死巫士、巨人、狼人等。一般是指威力无穷或者效率高超的武器/技术，或者万灵药，或者是妙手回春之高招。（译者注）
+#####[^2] 银弹（ _Silver Bullet_ ）的典故在 IT 经典图书《人月神话——软件项目管理之道》（ _The Mythical Man-Month: Essays on Software Engineering_ ）中提到过。在古老的传说中，只有银弹才能杀死巫士、巨人、狼人等。一般是指威力无穷或者效率高超的武器/技术，或者万灵药，或者是妙手回春之高招。（译者注）
 
+----
+这篇文章由[ Solomon Hykes ](http://blog.docker.io/author/solomon/)发表，点击[此处](http://blog.docker.io/2013/11/docker-0-7-docker-now-runs-on-any-linux-distribution/)可查阅原文。
+
+The article was contributed by [Solomon Hykes](http://blog.docker.io/author/solomon/), click [here](http://blog.docker.io/2013/11/docker-0-7-docker-now-runs-on-any-linux-distribution/) to read the original publication.
