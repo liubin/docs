@@ -289,4 +289,4 @@ RUN命令会影响文件系统。因此，不要再Dockerfile中用启动后台�
 这样，我们就在两个容器间建立起一个网络通道（bridge），基于此，我们可以建立一个类似rails的程序：一个容器可以访问数据库容器而不对外暴露其他接口。非常酷！数据库容器只需要知道第一个容器的别名（在本例中为cheez）和要打开的端口号。所以数据库容器也可以env命令来查看这个端口是否打开。
 
 ----
-这篇文章由 [Brian Morearty](https://twitter.com/BMorearty) 发表，点击 [此处](http://www.youtube.com/watch?v=BJT9bA64Hcc) 观看讲座视频，或下载讲座[PPT](http://docker.u.qiniudn.com/15_Docker_Tips_in_5_Minutes.pdf)。
+这篇文章由 [Brian Morearty](https://twitter.com/BMorearty) 发表，点击 [此处](http://www.youtube.com/watch?v=BJT9bA64Hcc) 观看讲座视频，或下载讲座 [PPT](http://docker.u.qiniudn.com/15_Docker_Tips_in_5_Minutes.pdf)。
