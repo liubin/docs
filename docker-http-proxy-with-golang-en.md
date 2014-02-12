@@ -1,7 +1,4 @@
-##使用 Golang 编写一个简单的 HTTP 代理
 ##Writing a simple HTTP proxy using Golang
-
-[goproxy](https://github.com/elazarl/goproxy) 是一个轻量级的 HTTP 代理库，可以很容易的编写一个仅供 [Docker](http://docker.io) 使用的代理 [程序](https://github.com/dockboard/docker-proxy) 。
 
 The [goproxy](https://github.com/elazarl/goproxy) is a light weight http proxy library, which allows you to easily write a [proxy program](https://github.com/dockboard/docker-proxy) for [Docker](http://docker.io/), here is the code:
 
@@ -32,21 +29,14 @@ func main() {
 }
 ```
 
-程序在每次 HTTP 的请求过程中都检测目标地址的 URL，如果不是 docker.io 或子站会返回一个错误信息。这为了避免使用代理访问其它的网站，致使服务器被墙。
+
+The program checks the target URL on each HTTP request, if the target is not docker.io or any of its sub sites, it will return an error. The purpose is to protect the server from abusing or misusing which possibly leads to being banned by Great Firewall because it's used to visit websites which are unaccessible in mainland China.
 
 
-
-The program checks the target URL on each HTTP request, if the target is not docker.io or any of its sub sites, it will return an error. Thus avoid the server being ‘great fire walled’ for visiting too many web sites which ‘should not’ be accessible in mainland China.
-
-
-
-##编写 Ubuntu init.d 的启动脚本
 ##Writing the init.d script for Ubuntu
 
-为了保证服务在后台运行，编写 Ubuntu init.d 的启动脚本管理 Proxy 服务。
 
-
-We’ll have to write the init.d script file to let the proxy service run as a daemon in Ubuntu:
+We have to write the init.d script file to let the proxy service run as a daemon in Ubuntu:
 
 
 ```
@@ -128,11 +118,9 @@ esac
 exit 0
 ```
 
-##Ubuntu 中修改 Docker 的配置文件使用 HTTP Proxy
 
 ##Modify docker’s configuration to use HTTP proxy in Ubuntu
 
-修改 /etc/init/docker.conf 加入 http proxy 的环境变量。
 
 Let’s add the http proxy environment variables to /etc/init /docker.conf:
 
@@ -156,7 +144,6 @@ script
 end script
 ```
 
-或者是修改 /etc/default/docker 文件，取消注释 http_proxy 的部分。
 
 Or we can remove the comment on http_proxy in etc/default/docker:
 
@@ -165,21 +152,18 @@ Or we can remove the comment on http_proxy in etc/default/docker:
 export http_proxy=http://192.241.209.203:8384/
 ```
 
-重启 Docker 的服务后下载 images 就会通过  192.241.209.203:8384 这个代理进行访问。
 
-Restart docker and it will download images throw the proxy 192.241.209.203:8384
+Restart docker and it will download images through the proxy 192.241.209.203:8384
 
-## 可用的代理地址
+
 ###Available proxies
 
 ```
 http://192.241.209.203:8384
 ```
 
-目前 [dockboard](http://www.dockboard.org) 为了方便国内用户使用和学习 [docker](http://docker.io) 技术，使用 [DigitalOcean](http://www.digitalocean.com) 的 VPS 架设了一个代理。代理地址不保证 7x24 小时稳定，如果遇到网络问题，请咨询我们的微博账号：[Docker中文社区](http://weibo.com/dockboard)。
 
 The [dockerboard](http://www.dockboard.org/) is now providing a proxy service (deployed on DigitalOcean’s VPS) for the domestic Chinese users to use and study [Docker](http://docker.io/). The proxy is not guaranteed to be available 24/7. If you encounter any problem, please contact the dockboard's [official Weibo account](http://weibo.com/dockboard) for consultation.
 
-如果开发者有闲置的 VPS 愿意架设 Docker 的代理为社区提供支持，我们非常愿意提供技术帮助，请联络：meaglith.ma@aliyun.com。
 
-If you have any idle VPS and you would like to deploy a proxy to support Chinese docker lovers, we would be very grateful and we are happy to provide total technical support. To make the greatness, please contact: [meaglith.ma@aliyun.com](mailto:meaglith.ma@aliyun.com)
+If you have any idle VPS and you would like to deploy a proxy to support Chinese docker lovers, we would be very grateful and happy to provide total technical support. To make the greatness, please contact: [meaglith.ma@aliyun.com](mailto:meaglith.ma@aliyun.com)
