@@ -36,7 +36,7 @@ func main() {
 
 
 
-This program checks the target URL on each HTTP request, if the target is not docker.io or any of its sub sites, it will return an error. Thus avoid the server being ‘great fire walled’ for visiting too many web sites which ‘should not’ be accessible in mainland China.
+The program checks the target URL on each HTTP request, if the target is not docker.io or any of its sub sites, it will return an error. Thus avoid the server being ‘great fire walled’ for visiting too many web sites which ‘should not’ be accessible in mainland China.
 
 
 
