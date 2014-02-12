@@ -26,7 +26,7 @@ If you want to kick the proverbial tires, you can test the docker registry:
 
     $ docker pull samalba/docker-registry
     $ docker run -d -p 5000:5000 samalba/docker-registry
-    $ # let's pull a sample image (or make one ourselves)
+    # 我们先pull下来一个简单的镜像（或者自己做一个也可以）
     $ docker pull busybox
     $ docker tag busybox localhost:5000/busybox
     $ docker push localhost:5000/busybox
@@ -275,6 +275,8 @@ And now, let's edit our configuration file for the docker registry. You can use 
     EOF
 
 Once this is done, set up an upstart job for the registry:
+
+***我建议在这里增加一个译者注，因为直接用cat来编辑文本内容实在不方便，可以建议读者用vim等其他比较强大的编辑器来直接编辑***
 
 然后为docker registry设置一个upstart作业：
 
